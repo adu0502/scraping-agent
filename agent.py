@@ -6,7 +6,8 @@ import csv
 import time
 
 # Load environment variables
-load_dotenv()
+# load_dotenv()
+os.environ["AGENTQL_API_KEY"]= st.secrets["AGENTQL_API_KEY"]
 
 # GraphQL query to fetch product details
 PRODUCT_QUERY = """
