@@ -13,7 +13,8 @@ from pydantic import BaseModel
 import re
 
 # Load environment variables
-load_dotenv()
+# load_dotenv()
+os.environ["AGENTQL_API_KEY"]= st.secrets["AGENTQL_API_KEY"]
 
 def serialize_pydantic(obj):
     if isinstance(obj, BaseModel):
